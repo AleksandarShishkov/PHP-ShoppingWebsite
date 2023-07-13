@@ -1,0 +1,17 @@
+{
+    "name": "aleks/indeavr_website",
+    "autoload": {
+        "psr-4": {
+            "Aleks\\IndeavrWebsite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex",
+            "email": "aleksandarshishkov123@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^10.15"
+    }
+}

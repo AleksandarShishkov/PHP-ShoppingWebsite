@@ -1,0 +1,35 @@
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .image-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .image-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .zoomable-image {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .zoomable-image:hover {
+    transform: scale(1.2);
+  }
+
+  .zoomable-image.zoomed {
+    transform: scale(5);
+    z-index: 9999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
