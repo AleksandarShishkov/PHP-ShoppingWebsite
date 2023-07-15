@@ -19,11 +19,11 @@ class Products {
 
             if($create_product) {
                 $_SESSION['success_message'] = "You have created a new product!";
-                header("Location: http://localhost/indeavr_website/src/View/Products/index.php");
+                header("Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php");
 
             } else {
                 $_SESSION['error_message'] = "There`s been an issue. Name taken or image extension invaid (jpg/jpeg/png). Try again!";
-                header("Location: http://localhost/indeavr_website/src/View/Products/index.php");
+                header("Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php");
             }
         }
 
@@ -33,10 +33,10 @@ class Products {
 
             if($edit_product) {
                 $_SESSION['success_message'] = "The item has been edited!";
-                header("Location: http://localhost/indeavr_website/src/View/Products/index.php"); 
+                header("Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php"); 
             } else {
                 $_SESSION['error_message'] = "Something went wrong. Try again!";
-                header("Location: http://localhost/indeavr_website/src/View/Products/index.php");
+                header("Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php");
             }
         }
 
