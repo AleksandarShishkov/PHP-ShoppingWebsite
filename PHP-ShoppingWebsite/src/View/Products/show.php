@@ -40,13 +40,13 @@ require_once '../includes/header.php';
     
             } else {
                 $_SESSION['error_message'] = 'No seller located. Try again.';
-                header('Location: http://localhost/indeavr_website/src/View/Products/index.php');
+                header('Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php');
             }
     
     
         } else {
             $_SESSION['error_message'] = 'No item located. Try again.';
-            header('Location: http://localhost/indeavr_website/src/View/Products/index.php');
+            header('Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php');
         }
 
 ?>
