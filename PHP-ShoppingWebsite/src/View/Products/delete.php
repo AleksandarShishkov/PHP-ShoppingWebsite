@@ -33,11 +33,11 @@ if (session_status() === PHP_SESSION_NONE) {
         if($conn->query($delete_item) === true) {
             $_SESSION['success_message'] = "The item has been deleted successfully!";
             $conn->close();
-            header("Location: http://localhost/indeavr_website/src/View/Products/index.php");
+            header("Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php");
         } else {
             $_SESSION['error_message'] = "There was an issue. Try again!";
             $conn->close();
-            header("Location: http://localhost/indeavr_website/src/View/Products/index.php");
+            header("Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php");
         }
         
     } else {
