@@ -32,7 +32,7 @@ if (session_status() === PHP_SESSION_NONE) {
     
         } else {
             $_SESSION['error_message'] = 'No item located. Try again.';
-            header('Location: http://localhost/indeavr_website/src/View/Products/index.php');
+            header('Location: http://localhost/PHP-ShoppingWebsite/src/View/Products/index.php');
         }
     
         if(!empty($_SESSION['success_message'])) {
