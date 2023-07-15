@@ -5,6 +5,6 @@
     }
     session_destroy();
 
-    header("Location:http://localhost/indeavr_website/src/View/home.php");
+    header("Location:http://localhost/PHP-ShoppingWebsite/src/View/home.php");
 
 ?>
