@@ -31,7 +31,7 @@ if (session_status() === PHP_SESSION_NONE) {
     
         } else {
             $_SESSION['error_message'] = 'No user located. Try again.';
-            header('Location: http://localhost/indeavr_website/src/View/home.php');
+            header('Location: http://localhost/PHP-ShoppingWebsite/src/View/home.php');
         }
     
         if(!empty($_SESSION['success_message'])) {
