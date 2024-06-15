@@ -6,7 +6,7 @@
     <h1 style="display: flex; justify-content: center; align-items: center; height: 15vh; color:darkslategray;">Register</h1>
     <hr style="border-color: white; border-width: 5px">
     
-        <form method="POST" style="border: 1px solid #000000; background-color:rgba(240, 255, 240, 0.5); padding: 20px; width: 300px; margin: 0 auto;" action="../../../../index.php">
+        <form method="POST" style="border: 1px solid #000000; background-color:rgba(240, 255, 240, 0.5); padding: 20px; width: 300px; margin: 0 auto;" action="../../../../index.php?controller=RegisterUserCommandHandler&request=register_user&method=register">
             <label for="name">Name:</label><br>
             <input style="text-align: center;" type="text" name="name" id="name" required><br><br>
 
@@ -26,7 +26,7 @@
             <input style="text-align: center;" type="password" name="password" id="password" requried><br><br>
 
             <input style=" margin-top: 5px; display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: white;
-                            border: none; border-radius: 20px;" type="submit" name="register_button" value="Register">
+                            border: none; border-radius: 20px;" type="submit">
         </form>
         <div style="display: flex; justify-content: center; align-items: center; height: 15vh;">
             <a href="../../home.php"><button style=" width: 100%; padding: 10px;padding-right: 50px;

@@ -1,5 +1,6 @@
 <?php 
     require_once "includes/header.php";     
+
 ?>
 
 
@@ -9,12 +10,12 @@
 
     <div style="display: flex; justify-content: center; align-items: center; color:blanchedalmond; height: 20vh;">
     <?php
-        if(!empty($_SESSION['success_message'])) {
-            echo "<h4 style='color: green'>" . $_SESSION['success_message'] . "</h4><br>";
-            $_SESSION['success_message'] = null;
-        } elseif(!empty($_SESSION['error_message'])) {
-            echo "<h4 style='color: red'>" . $_SESSION['error_message'] . "</h4><br>";
-            $_SESSION['error_message'] = null;
+        if(!empty($_GET['success_message'])) {
+            echo "<h4 style='color: green'>" . $_GET['success_message'] . "</h4><br>";
+            $_GET['success_message'] = null;
+        } elseif(!empty($_GET['error_message'])) {
+            echo "<h4 style='color: red'>" . $_GET['error_message'] . "</h4><br>";
+            $_GET['error_message'] = null;
         }
     ?>
     </div> 
