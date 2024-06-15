@@ -45,14 +45,11 @@ class ComposerStaticInit5969d28010049941ec89be1486b3f656
         'C' => 
         array (
             'Carbon\\' => 7,
+            'CQRS\\' => 5,
         ),
         'B' => 
         array (
             'Brick\\Math\\' => 11,
-        ),
-        'A' => 
-        array (
-            'Aleks\\IndeavrWebsite\\' => 21,
         ),
     );
 
@@ -112,13 +109,13 @@ class ComposerStaticInit5969d28010049941ec89be1486b3f656
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'CQRS\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Brick\\Math\\' => 
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
-        ),
-        'Aleks\\IndeavrWebsite\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

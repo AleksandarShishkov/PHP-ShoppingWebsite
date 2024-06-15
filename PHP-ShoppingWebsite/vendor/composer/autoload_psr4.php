@@ -19,6 +19,6 @@ return array(
     'Illuminate\\Container\\' => array($vendorDir . '/illuminate/container'),
     'Doctrine\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Inflector'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
+    'CQRS\\' => array($baseDir . '/src'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
-    'Aleks\\IndeavrWebsite\\' => array($baseDir . '/src'),
 );
