@@ -1,7 +1,8 @@
 <?php
 
-    namespace CQRS\Core\Domain\Infrastructure\Repository\UserRepository;
+    namespace CQRS\Core\Infrastructure\Repository\UserRepository;
 
+    use CQRS\Core\Domain\Model\User\User;
     use CQRS\Core\Domain\Model\User\UserRepositoryInterface;
     use CQRS\Core\Infrastructure\Database\Database;
 
@@ -28,8 +29,8 @@
 
             if($result->num_rows > 0) {
 
-                $user = $result->fetch_all(MYSQLI_ASSOC);
-                return $user;
+                $user = $result->fetch_assoc();
+                return new User($user['email'], $user['password']);
             }
 
             return null;
@@ -47,8 +48,8 @@
 
             if($result->num_rows > 0) {
 
-                $user = $result->fetch_all(MSQLI_ASSOC);
-                return $user;
+                $user = $result->fetch_assoc();
+                return new User($user['email'], $user['password']);
             }
 
             return null;

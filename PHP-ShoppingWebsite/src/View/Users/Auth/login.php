@@ -25,7 +25,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 
         <div class="login_div">
-            <form style="border: 1px solid #000000; background-color:rgba(240, 255, 240, 0.5); padding: 20px; width: 300px; margin: 0 auto;" method="POST" action="../../../../index.php?controller=LoginUserQueryHandler&method=login&request=login_user">
+            <form style="border: 1px solid #000000; background-color:rgba(240, 255, 240, 0.5); padding: 20px; width: 300px; margin: 0 auto;" method="POST" action="../../../../index.php?controller=LoginUserQueryHandler&method=handle">
                 <label for="email">Email:</label><br>
                 <input style="text-align: center;" type="text" name="email" id="email"><br><br>
 

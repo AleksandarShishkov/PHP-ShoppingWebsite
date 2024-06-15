@@ -1,31 +1,27 @@
 <?php
 
-    namespace CQRS\Core\App\Query\User\LoginUser;
+    namespace CQRS\App\Query\User\LoginUser;
 
-    use CQRS\Core\Domain\Model\UserModel\User\UserLoginModelInterface;
-
-    final class LoginUserQuery implements UserLoginModelInterface {
+    class LoginUserQuery {
 
         private $email;
         private $password;
 
-        public function __construct(array $user_credentials) {
+        public function __construct($email, $password) {
 
-            $this->email = $user_credentials['email'];
-            $this->password = $user_credentials['password'];
+            $this->email = $email;
+            $this->password = $password;
 
         }
 
-        #[\Override]
-        public function getEmail() {
-            
+        public function getUserEmail() {
+
             return $this->email;
 
         }
 
-        #[\Override]
-        public function getPassword() {
-            
+        public function getUserPassword() {
+
             return $this->password;
 
         }

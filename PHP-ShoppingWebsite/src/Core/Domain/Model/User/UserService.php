@@ -4,33 +4,33 @@
 
     class UserService {
 
-        private $userRepository;
+        private $user_repository;
 
-        public function __construct(UserRepositoryInterface $userRepository) {
+        public function __construct(UserRepositoryInterface $user_repository) {
 
-            $this->userRepository = $userRepository;
-
+            $this->user_repository = $user_repository;
+            
         }
 
         public function registerUser(string $email, string $password): User {
 
             $user = new User($email, $password);
-            $this->userRepository->save($user);
+            $this->user_repository->save($user);
             return $user;
 
         }
 
-        public function authenticate(string $email, string $password): ?User {
+        public function authenticate(string $email, string $password): void {
 
-            $user = $this->userRepository->findByEmail($email);
-
-            if($user && password_verify($password, $user->getPassword())) {
+            $user = $this->user_repository->findByEmail($email);
+    
+            if ($user && password_verify($password, $user->getPassword())) {
                 
-                return $user;
+                $user->login(true);
 
             }
-
-            return null;
+    
+            $user->login(false);
 
         }
     }

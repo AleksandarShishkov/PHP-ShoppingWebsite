@@ -6,7 +6,7 @@
 
         public function findById(string $id): ?User;
 
-        public function fundByEmail(string $email): ?User;
+        public function findByEmail(string $email): ?User;
 
         public function save(User $user): void;
 
