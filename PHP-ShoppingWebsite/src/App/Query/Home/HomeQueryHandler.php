@@ -2,31 +2,24 @@
 
     namespace CQRS\App\Query\Home;
 
+    use CQRS\Core\Domain\Model\Home\HomeService;
 
-    final class HomeQueryHandler {
+    class HomeQueryHandler {
 
+        private $home_service;
         private $home_query;
 
-        public function __construct($request) {
+        public function __construct(HomeService $service, HomeQuery $query) {
 
-            $this->home_query = new HomeQuery($request);
+            $this->home_query = $query;
+            $this->home_service = $service;
 
         }
 
-        public function homeQuery() {
+        public function handle() {
 
             $request = $this->home_query->getHomeQuery();
-
-            switch($request) {
-
-                case 'index':
-                    $this->home_query->index();
-                    break;
-
-                default:
-                    $this->home_query->notFound();
-                    break;
-            }
+            $this->home_service->execute($request);
 
         }
 

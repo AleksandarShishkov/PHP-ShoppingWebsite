@@ -6,7 +6,7 @@
 
     $router = new Router();
 
-    $route = isset($_GET['controller']) ? $_GET : $_GET = ['controller' => 'HomeQueryHandler', 'request' => 'index', 'method' => 'homeQuery'];
+    $route = isset($_GET['controller']) ? $_GET : $_GET = ['controller' => 'HomeQueryHandler', 'request' => 'index', 'method' => 'handle'];
 
     $router->makeRoute($route);
 

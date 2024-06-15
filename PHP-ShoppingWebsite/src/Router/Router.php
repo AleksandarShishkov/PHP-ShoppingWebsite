@@ -13,8 +13,6 @@
                 'request' => $route['request'] ?? '' 
             ];
 
-            // var_dump($route); exit();
-
             $factory = new Factory($path);
             
             $controller = $factory->createPath();
